@@ -1,3 +1,7 @@
+System.Console.WriteLine("hello world!!!!!!!! help pls");
+
+
+
 /*Bilfirma Software
 Projekt: Webbshop för lyxbilar / databas bilar 
 
@@ -24,3 +28,4 @@ Visa personalstatus (tillgänglighet av personal)
 
 Framtidsplaner
 (Hantera kundbokningar (bokning av provkörningar eller möten)
+*/

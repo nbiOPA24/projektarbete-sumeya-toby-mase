@@ -1,2 +1,9 @@
-Console.WriteLine("HELLO WORLD!"); 
-Console.WriteLine("Ändring"); 
+class Program
+{
+    static void Main() 
+    {
+        
+
+
+    }
+}

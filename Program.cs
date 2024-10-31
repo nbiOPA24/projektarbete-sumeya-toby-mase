@@ -65,10 +65,35 @@
         Console.WriteLine("1. Visa lagerstatus"); 
         Console.WriteLine("2. Lägg til bil till lager"); 
         Console.WriteLine("3. Gå tillbaka till huvudmenyn"); 
+
+        var choice = Console.ReadLine(); 
+        switch (choice)
+        {
+            case "1":
+                VisaLagerstatus(); 
+                break; 
+            
+        }
     }
 
     static void PersonalMeny() 
     {
+        Console.Clear(); 
+        Console.WriteLine("Personal Meny:"); 
+        Console.WriteLine("Säljare Meny"); 
+        Console.WriteLine("1. Visa lagerstatus"); 
+        Console.WriteLine("2. Uppdatera lager"); 
+        Console.WriteLine("3. Visa försäljningshistorik"); 
+        Console.WriteLine("4. Gå tilbaka till huvudmenyn"); 
+
+        var choice = Console.ReadLine(); 
+        switch (choice)
+        {
+            case "1":
+                VisaLagerstatus(); 
+                break; 
+                
+        }
 
     }
 

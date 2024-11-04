@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projektarbete-sumeya-toby-mase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d412d5a989b3a3e3159e1382a998ef832adfb5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53d3bd63e7adfbf06492211c186d44e37f41f5bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("projektarbete-sumeya-toby-mase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projektarbete-sumeya-toby-mase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,20 @@
-﻿class Program
+﻿using System.Runtime.CompilerServices;
+
+namespace Bilfirma;
+
+class Program
 {
+    static List<Car> lager = new List<Car>
+        {
+           
+            // Lista över bilar som finns nu i lagret
+            
+        };
+    static int maxAntalBilar = 20;
     static void Main() 
     {
+         
+
         while(true)
         {
             Console.Clear();
@@ -28,7 +41,9 @@
                 case "4": 
                     Console.WriteLine("Avslutar programmet..."); 
                     return; 
-                // default: Console.WriteLine("Ogiltigt val. Försök igen."); break; 
+                default: 
+                    Console.WriteLine("Ogiltigt val. Försök igen."); 
+                    break; 
             }
         } 
     }
@@ -84,7 +99,8 @@
         Console.WriteLine("1. Visa lagerstatus"); 
         Console.WriteLine("2. Uppdatera lager"); 
         Console.WriteLine("3. Visa försäljningshistorik"); 
-        Console.WriteLine("4. Gå tilbaka till huvudmenyn"); 
+        Console.WriteLine("4. Gå tilbaka till huvudmenyn");
+
 
         var choice = Console.ReadLine(); 
         switch (choice)

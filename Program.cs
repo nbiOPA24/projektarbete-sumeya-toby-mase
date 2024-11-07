@@ -58,7 +58,8 @@ class Program
         Console.Clear(); 
         Console.WriteLine("Köpare Meny"); 
         Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Gå tilbaka till huvudmenyn"); 
+        Console.WriteLine("2. Visa kontaktinformation");
+        Console.WriteLine("3. Gå tillbaka till huvudmenyn"); 
         
         var choice = Console.ReadLine(); 
         switch (choice)
@@ -67,11 +68,29 @@ class Program
                 VisaLagerstatus(); 
                 break; 
             case "2": 
-                return; 
+            VisaKontaktinformation();
+                break;
+            case "3":
+            return;
+            default:
+            Console.Writeline("Ogiltigt val,försök igen");
+            break;
+                
+
         }
     }
 
-
+static void VisaKontaktinformation()
+{
+    Console.Clear();
+    Console.WriteLine("Kontaktinformation:");
+    Console.WriteLine("Mase, tel nr: 070-407 03 44, mail: mase@hotmail.com");
+    Console.Writeline("Sumeya, tel nr: 070-343 44 33, mail: sumeya@yahoo.com");
+    Console.Writeline("Toby, tel nr: 070-321 44 65, mail: Toby@gmail.com");
+    Console.Writeline();
+    Console.Writeline("Tryck på valfri knapp för att återgå");
+    Console.ReadKey();
+}
 
     static void SäljareMeny()
     {

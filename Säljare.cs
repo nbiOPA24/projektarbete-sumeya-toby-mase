@@ -1,13 +1,9 @@
-public class Köpare : Användare 
+public class Säljare : Användare 
 {
-    public Köpare(string namn) : base(namn, "Köpare") { }
+    public Säljare(string namn) : base(namn, "Säljare") { }
 
-    public void VisaLagerStatus(List<Car> lager)
+    public Bil LäggTillBil(string märkte, int årsmodell, int miltal, string växellåda)
     {
-        Console.WriteLine("Bilar i lager: "); 
-        foreach (var Car in lager)
-        {
-            // Car.VisaInfo();
-        }
+        return new Bil(märkte, årsmodell, miltal, växellåda, "Tillgänglig");
     }
 }

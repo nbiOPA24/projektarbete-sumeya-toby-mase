@@ -55,71 +55,69 @@ class Program
 
     static void KöpareMeny() 
     {
+        Köpare köpare = new Köpare("Kund")
         Console.Clear(); 
-        Console.WriteLine("Köpare Meny"); 
-        Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Gå tilbaka till huvudmenyn"); 
-        
-        var choice = Console.ReadLine(); 
-        switch (choice)
-        {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
-            case "2": 
-                return; 
-        }
+        Console.WriteLine("Köpare Meny:");  
+        köpare.VisaLagerStatus(lager); 
+        Console.Readkey(); 
+
+        // Funktion för att köpa bilar
+        // ( Ta bort bilar från lager lista )
+        // ( Lägg till bil i såldaBilar lista )
     }
 
 
 
     static void SäljareMeny()
     {
+        Säljare säljare = new Säljare("Säljare"); 
         Console.Clear(); 
-        Console.WriteLine("Säljare Meny"); 
-        Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Lägg til bil till lager"); 
-        Console.WriteLine("3. Gå tillbaka till huvudmenyn"); 
-
-        var choice = Console.ReadLine(); 
-        switch (choice)
-        {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
+        Console.WriteLine("Säljare Meny:");  
+        Console.WriteLine("Lägg till din bil för att säljas!"); 
+        Console.Write("Märke: "); 
+        
+        // Funktion för att sälja sin bil 
+        // ( Lägg till bil i lager lista )
+        // 
             
-        }
+        
     }
 
     static void PersonalMeny() 
     {
+        Personal personal = new Personal("Admin"); 
         Console.Clear(); 
-        Console.WriteLine("Personal Meny:"); 
-        Console.WriteLine("Säljare Meny"); 
+        Console.WriteLine("Personal Meny:");  
         Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Uppdatera lager"); 
+        Console.WriteLine("2. Uppdatera bilstatus"); 
         Console.WriteLine("3. Visa försäljningshistorik"); 
         Console.WriteLine("4. Gå tilbaka till huvudmenyn");
 
-
-        var choice = Console.ReadLine(); 
-        switch (choice)
+        string choice = Console.ReadLine(); 
+        switch (choice) 
         {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
+            case "1" 
+                // kalla på personal klassen -> KontrolleraLagerStatus
+
+            case "2"
                 
+
+            case "3" 
+
+
+            case "4"
+
+            
+            default: 
+                Console.WriteLine("Ogiltligt val."); 
+                break; 
+
         }
+        
+
+        
 
     }
 
-    static void VisaLagerstatus()
-    {
-        Console.Clear(); 
-        Console.WriteLine("Lagerstatus:"); 
-        foreach (var bil in lager)
-        {
-            // bil.Visainfo(); 
-        }
-    }
+    
 }

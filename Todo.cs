@@ -1,7 +1,3 @@
-System.Console.WriteLine("hello world!!!!!!!! help pls");
-
-
-
 /*Bilfirma Software
 Projekt: Webbshop för lyxbilar / databas bilar 
 

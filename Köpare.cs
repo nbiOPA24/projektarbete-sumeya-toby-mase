@@ -9,7 +9,8 @@ public class Köpare : Användare
         Console.WriteLine("Detta är våra bilar i lager just nu:"); 
         foreach (var Bil in lager)
         {
-            Console.WriteLine($"ID: {Bil.Id} Status: {Bil.Status} - Pris: {Bil.Pris} {Bil.Märke} {Bil.Modell} - Miltal: {Bil.Miltal} Växellåda: {Bil.Växellåda} År: {Bil.Årsmodell}");
+            Bil.DisplayInfo();
+            Console.WriteLine();
         }
     }
 

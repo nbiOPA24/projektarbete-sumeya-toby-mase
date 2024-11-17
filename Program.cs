@@ -1,4 +1,4 @@
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -31,9 +31,9 @@ class Program
                 case "2":
                     SäljareMeny();
                     break; 
-                case "3": 
+                /*case "3": 
                     PersonalMeny(); 
-                    break; 
+                    break; */
                 case "4": 
                     Console.WriteLine("Avslutar programmet..."); 
                     avslutaProgrammet = true;
@@ -127,7 +127,7 @@ class Program
         }
     }
 
-    static void PersonalMeny() 
+    /*static void PersonalMeny() 
     {
         Personal personal = new Personal("Admin"); 
         bool tillbakaTillHuvudmeny = false; 
@@ -170,6 +170,6 @@ class Program
                     break; 
             }
         }
-    }
+    }*/
 }
 

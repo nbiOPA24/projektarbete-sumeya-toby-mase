@@ -7,13 +7,13 @@ public class Säljare : Användare
         Console.WriteLine("Detta är våra bilar i lager just nu"); 
         foreach (var Bil in lager)
         {
-            Console.WriteLine($"ID: {Bil.Id} Status: {Bil.Status} - Pris: {Bil.Pris} {Bil.Märke} {Bil.Modell} - Miltal: {Bil.Miltal} Växellåda: {Bil.Växellåda} År: {Bil.Årsmodell}");
+            Bil.DisplayInfo();
         }
     }
 
     public void Säljbil(List<Bil> lager)
     {
-        Console.WriteLine("Här kan du sälja din bil:");
+        Console.WriteLine("\nHär kan du sälja din bil:");
 
         while (true)
         {
@@ -23,7 +23,7 @@ public class Säljare : Användare
             Console.WriteLine("--------------------------------------");
 
             // Märke
-            Console.Write("Välj märke"); 
+            Console.Write("Ange märke: "); 
             string? märke = Console.ReadLine(); 
             if (string.IsNullOrWhiteSpace(märke))
             {
@@ -32,7 +32,7 @@ public class Säljare : Användare
             } 
 
             // Modell
-            Console.Write("Välj modell");  
+            Console.Write("Ange modell: ");  
             string? modell = Console.ReadLine(); 
             if (string.IsNullOrWhiteSpace(modell))
             {
@@ -41,7 +41,7 @@ public class Säljare : Användare
             }
 
             // Miltal
-            Console.Write("Ange miltal"); 
+            Console.Write("Ange miltal: "); 
             if (!int.TryParse(Console.ReadLine(), out int miltal))
             {
                 Console.WriteLine("Error - Ange ett giltigt nummer för Miltal"); 
@@ -49,7 +49,7 @@ public class Säljare : Användare
             }
 
             // Växellåda
-            Console.Write("Automat/Manual?"); 
+            Console.Write("Automat/Manual: "); 
             string? växellåda = Console.ReadLine(); 
             if (string.IsNullOrWhiteSpace(växellåda))
             {
@@ -58,7 +58,7 @@ public class Säljare : Användare
             } 
 
             // Årsmodell
-            Console.Write("Ange årsmodell"); 
+            Console.Write("Ange årsmodell: "); 
             if (!int.TryParse(Console.ReadLine(), out int årsmodell))
             {
                 Console.WriteLine("Error - Årsmodell måste vara ett giltigt nummer"); 

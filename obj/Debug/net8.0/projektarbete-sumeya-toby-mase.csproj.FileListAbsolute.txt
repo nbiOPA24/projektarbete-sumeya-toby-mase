@@ -1,0 +1,15 @@
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\bin\Debug\net8.0\projektarbete-sumeya-toby-mase.exe
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\bin\Debug\net8.0\projektarbete-sumeya-toby-mase.deps.json
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\bin\Debug\net8.0\projektarbete-sumeya-toby-mase.runtimeconfig.json
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\bin\Debug\net8.0\projektarbete-sumeya-toby-mase.dll
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\bin\Debug\net8.0\projektarbete-sumeya-toby-mase.pdb
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.AssemblyInfoInputs.cache
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.AssemblyInfo.cs
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.csproj.CoreCompileInputs.cache
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.sourcelink.json
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.dll
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\refint\projektarbete-sumeya-toby-mase.dll
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.pdb
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\projektarbete-sumeya-toby-mase.genruntimeconfig.cache
+C:\Users\tobyh\Desktop\projektarbete-sumeya-toby-mase\obj\Debug\net8.0\ref\projektarbete-sumeya-toby-mase.dll

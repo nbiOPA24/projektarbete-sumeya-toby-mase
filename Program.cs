@@ -1,144 +1,174 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace Bilfirma;
+using System.Runtime.CompilerServices;
 
 class Program
 {
-    static List<Car> lager = new List<Car>
+    static List<Bil> lager = new List<Bil>
         {
-           
-            // Lista över bilar som finns nu i lagret
-            
+            new Bil(1,"Volvo", "XC60,", 2020, 25000, "Automat", null, "Tillgänglig"),
+            new Bil(2, "Toyota", "Corolla", 2018, 45000, "Maneull", null, "Tillgänglig"),
+            new Bil(3, "Ford", "Mustang", 2022, 5000, "Automat", null, "Tillgänglig")
         };
-    static int maxAntalBilar = 20;
+    // flytta till Personal 
+    // public int maxAntalBilar { get; set; } = 20; 
     static void Main() 
     {
-         
+        bool avslutaProgrammet = false;
 
-        while(true)
+        while(!avslutaProgrammet)
+        {
+            
+            Console.WriteLine("Välkommen till våran Bilfirma!"); 
+            Console.WriteLine("Välj din roll / Avsluta "); 
+            Console.WriteLine("1. Köpare  2. Säljare  3. Personal  4. Avsluta");
+            
+            var choice = Console.ReadLine(); 
+
+            switch (choice) 
+            {
+                case "1":
+                    KöpareMeny();
+                    break;
+                case "2":
+                    SäljareMeny();
+                    break; 
+                /*case "3": 
+                    PersonalMeny(); 
+                    break; */
+                case "4": 
+                    Console.WriteLine("Avslutar programmet..."); 
+                    avslutaProgrammet = true;
+                    break;
+                default: 
+                    Console.WriteLine("Error, försök igen."); 
+                    break; 
+            }
+        } 
+    }
+
+    static void KöpareMeny()
+    {
+        Köpare köpare = new Köpare("Köpare");
+        bool tillbakaTillHuvudmeny = false;
+
+        while(!tillbakaTillHuvudmeny)
         {
             Console.Clear();
-            Console.WriteLine("Välkommen till våran Bilfirma!"); 
-            Console.WriteLine("Välj din roll:"); 
-            Console.WriteLine("1. Köpare");
-            Console.WriteLine("2. Säljare"); 
-            Console.WriteLine("3. Personal"); 
-            Console.WriteLine("4. Avsluta"); 
+            Console.WriteLine("Meny för köpare:"); 
+            Console.WriteLine("1. Visa lagerstatus"); 
+            Console.WriteLine("2. Köp din dröm bil!"); 
+            Console.WriteLine("3. Tilbaka till huvudmenyn");
 
             var choice = Console.ReadLine(); 
 
             switch (choice) 
             {
                 case "1":
-                    KöpareMeny(); 
+                    köpare.VisaLagerStatus(lager); 
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break; 
+
+                case "2": 
+                    köpare.KöpBil(lager);
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
                     break;
-                case "2":
-                    SäljareMeny(); 
-                    break; 
-                case "3": 
-                    PersonalMeny(); 
-                    break; 
-                case "4": 
-                    Console.WriteLine("Avslutar programmet..."); 
-                    return; 
-                default: 
-                    Console.WriteLine("Ogiltigt val. Försök igen."); 
-                    break; 
-            }
-        } 
-    }
-
-    
-    
-    
-
-
-    static void KöpareMeny() 
-    {
-        Console.Clear(); 
-        Console.WriteLine("Köpare Meny"); 
-        Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Visa kontaktinformation");
-        Console.WriteLine("3. Gå tillbaka till huvudmenyn"); 
-        
-        var choice = Console.ReadLine(); 
-        switch (choice)
-        {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
-            case "2": 
-            VisaKontaktinformation();
-                break;
-            case "3":
-            return;
-            default:
-            Console.Writeline("Ogiltigt val,försök igen");
-            break;
                 
-
+                case "3":
+                    tillbakaTillHuvudmeny = true; 
+                    break;
+                
+                default: 
+                    Console.WriteLine("Error, försök igen.");
+                    break;
+            }
         }
     }
 
-static void VisaKontaktinformation()
-{
-    Console.Clear();
-    Console.WriteLine("Kontaktinformation:");
-    Console.WriteLine("Mase, tel nr: 070-407 03 44, mail: mase@hotmail.com");
-    Console.Writeline("Sumeya, tel nr: 070-343 44 33, mail: sumeya@yahoo.com");
-    Console.Writeline("Toby, tel nr: 070-321 44 65, mail: Toby@gmail.com");
-    Console.Writeline();
-    Console.Writeline("Tryck på valfri knapp för att återgå");
-    Console.ReadKey();
-}
+
 
     static void SäljareMeny()
     {
-        Console.Clear(); 
-        Console.WriteLine("Säljare Meny"); 
-        Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Lägg til bil till lager"); 
-        Console.WriteLine("3. Gå tillbaka till huvudmenyn"); 
+        Säljare säljare = new Säljare("Säljare"); 
+        bool tillbakaTillHuvudmeny = false; 
 
-        var choice = Console.ReadLine(); 
-        switch (choice)
+        while (!tillbakaTillHuvudmeny)
         {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
-            
-        }
-    }
+            Console.Clear();
+            Console.WriteLine("Meny för säljare:"); 
+            Console.WriteLine("1. Visa lagerstatus"); 
+            Console.WriteLine("2. Sälj din bil"); 
+            Console.WriteLine("3. Tilbaka till huudmenyn");
 
-    static void PersonalMeny() 
-    {
-        Console.Clear(); 
-        Console.WriteLine("Personal Meny:"); 
-        Console.WriteLine("Säljare Meny"); 
-        Console.WriteLine("1. Visa lagerstatus"); 
-        Console.WriteLine("2. Uppdatera lager"); 
-        Console.WriteLine("3. Visa försäljningshistorik"); 
-        Console.WriteLine("4. Gå tilbaka till huvudmenyn");
+            var choice = Console.ReadLine(); 
 
-
-        var choice = Console.ReadLine(); 
-        switch (choice)
-        {
-            case "1":
-                VisaLagerstatus(); 
-                break; 
+            switch (choice) 
+            {
+                case "1":
+                    säljare.VisaLagerStatus(lager); 
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break; 
                 
+                case "2": 
+                    säljare.Säljbil(lager);
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break;
+                
+                case "3": 
+                    tillbakaTillHuvudmeny = true; 
+                    break; 
+                
+                default: 
+                    Console.WriteLine("Error, försök igen."); 
+                    break;
+            }
         }
-
     }
 
-    static void VisaLagerstatus()
+    /*static void PersonalMeny() 
     {
-        Console.Clear(); 
-        Console.WriteLine("Lagerstatus:"); 
-        foreach (var bil in lager)
+        Personal personal = new Personal("Admin"); 
+        bool tillbakaTillHuvudmeny = false; 
+
+        while (!tillbakaTillHuvudmeny)
         {
-            // bil.Visainfo(); 
+            Console.Clear(); 
+            Console.WriteLine("Personal Meny:");  
+            Console.WriteLine("1. Visa lagerstatus"); 
+            Console.WriteLine("2. Uppdatera bilstatus"); 
+            Console.WriteLine("3. Visa försäljningshistorik"); 
+            Console.WriteLine("4. Gå tilbaka till huvudmenyn");
+
+            var choice = Console.ReadLine(); 
+            switch (choice) 
+            {
+                case "1":
+                    personal.VisaLagerStatus(lager);
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break;
+
+                case "2":
+                    personal.UppdateraBilStatus(lager); 
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break;
+
+                case "3":
+                    personal.VisaFörsäljningshistorik();
+                    Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                    Console.ReadKey();
+                    break;
+
+                case "4":
+                    tillbakaTillHuvudmeny = true;
+                    break;
+                default: 
+                    Console.WriteLine("Error, försök igen."); 
+                    break; 
+            }
         }
-    }
+    }*/
 }

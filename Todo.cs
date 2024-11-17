@@ -19,7 +19,4 @@ Visa personalstatus (tillgänglighet av personal)
 KLASSER: 
 Program, Bil, Användare, Köpare, Säljare, Personal (polymorphism)
 
-Framtidsplaner 
-(Hantera kundbokningar (bokning av provkörningar eller möten)
-
 */

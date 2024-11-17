@@ -4,7 +4,7 @@ public class Säljare : Användare
 
     public void VisaLagerStatus(List<Bil> lager)
     {
-        Console.WriteLine("Detta är våra bilar i lager just nu"); 
+        Console.WriteLine("Status på våra bilar i lager just nu"); 
         foreach (var Bil in lager)
         {
             Bil.DisplayInfo();
@@ -13,14 +13,15 @@ public class Säljare : Användare
 
     public void Säljbil(List<Bil> lager)
     {
-        Console.WriteLine("\nHär kan du sälja din bil:");
+        Console.WriteLine("Här kan du sälja din bil:");
 
         while (true)
         {
+            Console.Clear();
             Random random = new Random(); 
             int id = random.Next(1,101); 
             
-            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("--------------------------");
 
             // Märke
             Console.Write("Ange märke: "); 

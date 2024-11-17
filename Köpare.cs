@@ -6,7 +6,7 @@ public class Köpare : Användare
 
     public void VisaLagerStatus(List<Bil> lager)
     {
-        Console.WriteLine("Detta är våra bilar i lager just nu:"); 
+        Console.WriteLine("Status på våra bilar i lager just nu:"); 
         foreach (var Bil in lager)
         {
             Bil.DisplayInfo();
@@ -22,8 +22,13 @@ public class Köpare : Användare
         
         while(true)
         {
-            Console.Write("Ange ID på bilen du vill köpa (eller 'q' för att avbryta): ");
-            
+            Console.Clear();
+            foreach (var Bil in lager)
+            {
+                Bil.DisplayInfo();
+                Console.WriteLine();
+            }
+            Console.WriteLine("Ange ID på bilen du vill köpa (eller 'q' för att avbryta): ");
             string input = Console.ReadLine(); 
             if (input.ToLower() == "q")
             {

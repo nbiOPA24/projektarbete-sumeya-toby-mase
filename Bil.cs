@@ -23,7 +23,7 @@ public class Bil
 
     public void DisplayInfo()
     {
-        Console.WriteLine($"ID: {Id} Status: {Status} - Pris: {Pris} {Märke} {Modell} - Miltal: {Miltal} Växellåda: {Växellåda} År: {Årsmodell}");
+        Console.WriteLine($"(ID: {Id}) Status: {Status} - Pris: {Pris} {Märke} {Modell} - Miltal: {Miltal} Växellåda: {Växellåda} År: {Årsmodell}");
         
     }
 

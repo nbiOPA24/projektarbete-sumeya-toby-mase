@@ -5,7 +5,7 @@ class Program
     static List<Bil> lager = new List<Bil>
         {
             new Bil(1,"Volvo", "XC60,", 2020, 25000, "Automat", null, "Tillgänglig"),
-            new Bil(2, "Toyota", "Corolla", 2018, 45000, "Maneull", null, "Tillgänglig"),
+            new Bil(2, "Toyota", "Corolla", 2018, 45000, "Manuell", null, "Tillgänglig"),
             new Bil(3, "Ford", "Mustang", 2022, 5000, "Automat", null, "Tillgänglig")
         };
     // flytta till Personal 
@@ -16,10 +16,10 @@ class Program
 
         while(!avslutaProgrammet)
         {
-            
+            Console.Clear();
             Console.WriteLine("Välkommen till våran Bilfirma!"); 
             Console.WriteLine("Välj din roll / Avsluta "); 
-            Console.WriteLine("1. Köpare  2. Säljare  3. Personal  4. Avsluta");
+            Console.WriteLine("'1' Köpare  '2' Säljare  '3' Personal  '4' Avsluta");
             
             var choice = Console.ReadLine(); 
 

@@ -1,4 +1,4 @@
-﻿using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -172,3 +172,4 @@ class Program
         }
     }
 }
+

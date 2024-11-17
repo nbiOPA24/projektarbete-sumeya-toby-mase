@@ -18,4 +18,5 @@ Visa personalstatus (tillgänglighet av personal)
 
 KLASSER: 
 Program, Bil, Användare, Köpare, Säljare, Personal (polymorphism)
+
 */

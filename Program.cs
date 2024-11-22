@@ -1,4 +1,4 @@
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -8,8 +8,7 @@ class Program
             new Bil(2, "Toyota", "Corolla", 2018, 45000, "Manuell", null, "Tillgänglig"),
             new Bil(3, "Ford", "Mustang", 2022, 5000, "Automat", null, "Tillgänglig")
         };
-    // flytta till Personal 
-    // public int maxAntalBilar { get; set; } = 20; 
+     
     static void Main() 
     {
         bool avslutaProgrammet = false;
@@ -31,9 +30,9 @@ class Program
                 case "2":
                     SäljareMeny();
                     break; 
-                /*case "3": 
+                case "3": 
                     PersonalMeny(); 
-                    break; */
+                    break; 
                 case "4": 
                     Console.WriteLine("Avslutar programmet..."); 
                     avslutaProgrammet = true;
@@ -127,31 +126,31 @@ class Program
         }
     }
 
-    /*static void PersonalMeny() 
+    static void PersonalMeny()
     {
-        Personal personal = new Personal("Admin"); 
-        bool tillbakaTillHuvudmeny = false; 
+        Personal personal = new Personal("Admin");
+        bool tillbakaTillHuvudmeny = false;
 
         while (!tillbakaTillHuvudmeny)
         {
-            Console.Clear(); 
-            Console.WriteLine("Personal Meny:");  
-            Console.WriteLine("1. Visa lagerstatus"); 
-            Console.WriteLine("2. Uppdatera bilstatus"); 
-            Console.WriteLine("3. Visa försäljningshistorik"); 
-            Console.WriteLine("4. Gå tilbaka till huvudmenyn");
+            Console.Clear();
+            Console.WriteLine("Meny för personal:");
+            Console.WriteLine("1. Visa lagerstatus");
+            Console.WriteLine("2. Uppdatera bilstatus (sätt pris och status)");
+            Console.WriteLine("3. Visa försäljningshistorik");
+            Console.WriteLine("4. Gå tillbaka till huvudmenyn");
 
-            var choice = Console.ReadLine(); 
-            switch (choice) 
+            var choice = Console.ReadLine();
+            switch (choice)
             {
                 case "1":
-                    personal.VisaLagerStatus(lager);
+                    personal.VisaLagerStatus(Program.lager);
                     Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
                     Console.ReadKey();
                     break;
 
                 case "2":
-                    personal.UppdateraBilStatus(lager); 
+                    personal.UppdateraBilStatus(Program.lager);
                     Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
                     Console.ReadKey();
                     break;
@@ -165,10 +164,13 @@ class Program
                 case "4":
                     tillbakaTillHuvudmeny = true;
                     break;
-                default: 
-                    Console.WriteLine("Error, försök igen."); 
-                    break; 
-            }
+
+                default:
+                    Console.WriteLine("Error, försök igen.");
+                    break;
         }
-    }*/
+    }
+}
+        
+    
 }
